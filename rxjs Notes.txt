@@ -1,0 +1,43 @@
+do() => tap()
+catch() => catchError()
+switch() => switchAll()
+finally() => finalize()
+throw() => throwError()
+
+An observable is just an object with a forEach method
+
+
+// Observable
+{
+    // foreEach is how you get data out of an observable
+    forEach: function(observer) {
+        observer.onNext()
+    }
+}
+
+concatAll() returns events from observables in the order in which they were recieved.  This means it caches observables and doesn't forEach over them if they come back before the observables before them in the order.
+
+takeUntil() don't unsubscribe from events!!!! create streams of data that complete when you want them to.
+
+- You have a source observable and a stop observable.  You subscribe to the source until the stop observable fires an event.
+
+
+concatAll()  => when you care about order
+mergeAll()  => when you don't care about order
+switchLatest() => cancels inner observables when the next one emits a value (HTTP/Websockets). It                     only listens to one at a time. Disposes the current one and switches to the                         latest observable.
+
+
+HINT: You can use map() to start listening to another observable
+
+4 Stages
+
+1. What are the streams that I have
+2. What do I want to do with them
+3. How can I combine these streams into the stream that I want
+4. What do I want to do with it
+
+ICFC
+1. What events/streams do I have (IDENTIFY)
+2. How do I compose them into the stream I want (COMPOSE)
+3. Which of the 3 flattening strategies do I want (FLATTEN)
+4. Consme the data (forEach over it) (CONSUME)

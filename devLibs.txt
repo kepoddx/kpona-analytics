@@ -1,0 +1,4 @@
+
+Device Detction
+
+https://github.com/matthewhudson/current-device

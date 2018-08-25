@@ -1,0 +1,28 @@
+{
+  "name": "kpana",
+  "version": "1.0.0",
+  "description": "Analytics library using rxjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --watch --inline",
+    "postinstall": "typings install"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jquery": "^3.3.2",
+    "ts-loader": "^4.3.0",
+    "typedoc": "^0.11.1",
+    "typescript": "^2.8.3",
+    "typings": "^2.1.1",
+    "webpack": "^4.9.1",
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "@types/js-cookie": "^2.1.0",
+    "js-cookie": "^2.2.0",
+    "rxjs": "^6.2.0",
+    "ua-parser-js": "^0.7.18"
+  }
+}
